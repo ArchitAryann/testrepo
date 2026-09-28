@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Welcome</h1>
+    <p id="message">Type your name below and click the button.</p>
+
+    <input type="text" id="userInput" placeholder="Enter your name">
+    <button id="greetBtn">Say Hello</button>
+  </div>
+
+  <script>
+    const input = document.getElementById("userInput");
+    const button = document.getElementById("greetBtn");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", () => {
+      const name = input.value.trim();
+      message.textContent = name ? `Hello, ${name}!` : "Please enter your name first.";
+    });
+  </script>
+</body>
+</html>
